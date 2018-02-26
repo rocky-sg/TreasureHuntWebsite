@@ -1,4 +1,3 @@
 # TreasureHuntWebsite
 I Need Coffee
-<hr>
-Bite my shiny metal ass
+#free-the-nibble-2018
