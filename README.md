@@ -1,13 +1,4 @@
 # TreasureHuntWebsite
 
-khvisjdvopsajd
-
-I Need Coffee
-#free-the-nibble-2018
-
-Yoooo
-
-if you like pina coladas
-and getting caught in the rain
-
-yeet
+I think we should have a main page that shows all of the "keys" youve collected from solving the puzzles on the side pages.
+Then after youve collected all the keys you win the website.
