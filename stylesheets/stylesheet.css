@@ -9,6 +9,15 @@
   {
     background-color: #5974b3;
   }
+
+.myImage 
+{
+	float: left;
+	height: 75px;
+  	width: 235px;
+  	font-family: Veranda;
+}
+
   @font-face
   {
     font-family: 'lakeshore';
