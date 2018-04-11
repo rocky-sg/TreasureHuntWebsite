@@ -22,14 +22,20 @@
         
 		<div class="form-group">
   			<label for="usr">Answer:</label>
-  				<input type="text" class="form-control" id="usr">
+  				<input type="text" class="form-control" id="myText">
 		</div>
 		<div class="form-group">
-			<button type="submit" class="btn btn-default">Submit</button>
+			<button type="submit" class="btn btn-default" onclick="myFunction()">Submit</button>
 		</div>
         <!--When Submit button is clicked, Next button should work-->
 		<br>
-			<button type="button" class="btn btn-primary active" "btn-block" disabled>Next Puzzle</button>
+			<button type="button" class="btn btn-primary active" "btn-block" id="Next" disabled>Next Puzzle</button>
+		<script>
+			function myFunction() {
+				if (document.getElementById("myText").value === "now")
+   				 document.getElementById("Next").disabled = false;
+    			}
+		</script>
     <hr>
 	</body>
 </html>
