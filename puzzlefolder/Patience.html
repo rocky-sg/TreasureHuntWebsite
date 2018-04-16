@@ -28,15 +28,16 @@
 			<button type="submit" class="btn btn-default" onclick="setTimeout(myFunction, 10000)">Submit</button>
 		</div>
 		<br>
-			<button type="button" class="btn btn-primary active" "btn-block" id="Next" onclick="window.location.href'http://google.com';" disabled>Next Puzzle</button>
+		<button type="button" class="btn btn-primary active" onclick="window.location.href='/puzzlefolder/WhoWillDie.html'" "btn-block" id="Next" disabled>Next Puzzle</button>
 		<script>
         
 			function myFunction() {
+				if(document.getElementById("myText").value === "")
    				 document.getElementById("Next").disabled = false;
     			}
                 
             
 		</script>
-    <hr>
+   		 <hr>
 	</body>
 </html>
