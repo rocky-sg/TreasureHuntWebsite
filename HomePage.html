@@ -21,10 +21,10 @@
 		</p>
 		<div class="form-group">
   			<label for="usr">Name:</label>
-  				<input type="text" class="form-control" id="usr" placeholder="Doesn't matter">
+  				<input type="text" class="form-control" id="myText" placeholder="Doesn't matter">
 		</div>
 		<div class="form-group">
-			<button type="submit" class="btn btn-default">Submit</button>
+			<button type="submit" class="btn btn-default" onclick="myFunction()">Submit</button>
 		</div>
     <div class="form-group">
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><button>For a Good Time</button></a>
@@ -32,6 +32,22 @@
 
 		<br>
 			<button type="button" class="btn btn-primary active" onclick="window.location.href='/puzzlefolder/Box.html'" "btn-block">Start</button>
+		<script>
+			function myFunction() {
+				if(document.getElementById("myText").value === "Now"){
+					window.location.href='/puzzlefolder/Patience.html'
+				}
+				
+				else if(document.getElementById("myText").value === ""){
+					window.location.href='/puzzlefolder/WhoWillDie.html'
+				}
+				
+				else if(document.getElementById("myText").value === "4"){
+					window.location.href='/puzzlefolder/buttonclick.html'
+				}
+			}
+		</script>
     <hr>
+		
 	</body>
 </html>
