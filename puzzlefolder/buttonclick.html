@@ -7,27 +7,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/stylesheet.css">
 	<style>
-		p {border-style: solid}
+		p {margin: 200px; margin-top: 50px; margin-bottom: 50px}
 	</style>
 	</head>
 	<body class="container">
 		<header class = "Main-header">
 			<h1 style="text-align: center; background-color: rgba(25, 99, 71, 0.5); color: black">Treasure Hunt:</h1>
             <h2 style="text-align: center; color: grey;">Solve the puzzle</h2>
+			<h5 style="text-align: center; color: lightsteelblue;">One of these buttons will reviel the password to the next page</h5>
 		</header>
-		<hr>
         
        <p>
        <button type="pzl" class="btn btn-default" onclick="myFunction1()" id="button0" >Puzzle</button>
-       <button type="pzl" class="btn btn-default" onclick="myFunction()" id="button1" disabled>Puzzle</button>
-       <button type="pzl" class="btn btn-default" onclick="myFunction()" id="button2" disabled>Puzzle</button>
-       <button type="pzl" class="btn btn-default" onclick="myFunction()" id="button3" disabled>Puzzle</button>
-       <button type="pzl" class="btn btn-default" onclick="myFunction()" id="button4" disabled>Puzzle</button>
-       <button type="pzl" class="btn btn-default" onclick="myFunction()" id="button5" disabled>Puzzle</button>
-       <button type="pzl" class="btn btn-default" onclick="myFunction()" id="button6" disabled>Puzzle</button>
-       <button type="pzl" class="btn btn-default" onclick="myFunction()" id="button7" disabled>Puzzle</button>
-       <button type="pzl" class="btn btn-default" onclick="myFunction()" id="button8" disabled>Puzzle</button>
-       <button type="pzl" class="btn btn-default" onclick="myFunction()" id="button9" disabled>Puzzle</button>
+       <button type="pzl" class="btn btn-default" onclick="myFunction2()" id="button1" disabled>Puzzle</button>
+       <button type="pzl" class="btn btn-default" onclick="myFunction3()" id="button2" disabled>Puzzle</button>
+       <button type="pzl" class="btn btn-default" onclick="myFunction4()" id="button3" disabled>Puzzle</button>
+       <button type="pzl" class="btn btn-default" onclick="myFunction5()" id="button4" disabled>Puzzle</button>
+       <button type="pzl" class="btn btn-default" onclick="myFunction6()" id="button5" disabled>Puzzle</button>
+       <button type="pzl" class="btn btn-default" onclick="myFunction7()" id="button6" disabled>Puzzle</button>
+       <button type="pzl" class="btn btn-default" onclick="myFunction8()" id="button7" disabled>Puzzle</button>
+       <button type="pzl" class="btn btn-default" onclick="myFunction9()" id="button8" disabled>Puzzle</button>
+       <button type="pzl" class="btn btn-default" onclick="myFunction10()" id="button9" disabled>Puzzle</button>
        
        </p>
         
@@ -42,24 +42,109 @@
 		</div>
         <!--When Submit button is clicked, Next button should work-->
 		<br>
-			<button type="button" class="btn btn-primary active" "btn-block" id="Next" onclick="redirect()" disabled>Next Puzzle</button>
+			<button type="button" class="btn btn-primary active" "btn-block" id="Next" onclick="window.location.href='/FinalPage.html'" disabled>Next</button>
 		<script>
-			function myFunction() {
-				if (document.getElementById("myText").value === "now")
+		
+		function myFunction() {
+				if (document.getElementById("myText").value === "Mysterious")
    				 document.getElementById("Next").disabled = false;
     			}
-			function myFunction1(){
-        document.getElementByID("button0).disabled = true;
+			
+		function myFunction1(){
+			if(document.getElementById("button0").disabled === false){
+        document.getElementById("button0").disabled = true;
         document.getElementById("button3").disabled = false;
         document.getElementById("button7").disabled = false;
         document.getElementById("button9").disabled = false;
-      }
-			function redirect() {
-            			document.location.href='';
-          		  }
-                
+		document.getElementById("button5").disabled = true;
+			}
+		}
+			
+		function myFunction3(){
+			if(document.getElementById("button2").disabled === false){
+        document.getElementById("button2").disabled = true;
+        document.getElementById("button9").disabled = false;
+        document.getElementById("button3").disabled = false;
+        document.getElementById("button5").disabled = false;
+			}
+		}
+			
+		function myFunction2(){
+			if(document.getElementById("button1").disabled === false){
+        document.getElementById("button1").disabled = true;
+        document.getElementById("button0").disabled = false;
+        document.getElementById("button8").disabled = false;
+        document.getElementById("button6").disabled = false;
+		document.getElementById("button5").disabled = true;
+			}
+		}
+			
+		function myFunction4(){
+			if(document.getElementById("button3").disabled === false){
+        document.getElementById("button3").disabled = true;
+        document.getElementById("button4").disabled = false;
+        document.getElementById("button6").disabled = false;
+		document.getElementById("button5").disabled = true;
+			}
+		}
+			
+		function myFunction5(){
+			if(document.getElementById("button4").disabled === false){
+        document.getElementById("button4").disabled = true;
+        document.getElementById("button2").disabled = false;
+        document.getElementById("button7").disabled = false;
+        document.getElementById("button0").disabled = false;
+		document.getElementById("button5").disabled = true;
+			}
+		}
+			
+		function myFunction6(){
+			if(document.getElementById("button5").disabled === false){
+      		document.getElementById("button5").innerHTML="Mysterious";
+			}
+		}
+			
+		function myFunction7(){
+			if(document.getElementById("button6").disabled === false){
+        document.getElementById("button6").disabled = true;
+        document.getElementById("button1").disabled = false;
+        document.getElementById("button7").disabled = false;
+        document.getElementById("button9").disabled = false;
+		document.getElementById("button5").disabled = true;
+			}
+		}
+			
+		function myFunction8(){
+			if(document.getElementById("button7").disabled === false){
+        document.getElementById("button7").disabled = true;
+        document.getElementById("button0").disabled = false;
+        document.getElementById("button4").disabled = false;
+        document.getElementById("button8").disabled = false;
+		document.getElementById("button5").disabled = true;
+			}
+		}
+			
+		function myFunction9(){
+			if(document.getElementById("button8").disabled === false){
+        document.getElementById("button8").disabled = true;
+        document.getElementById("button9").disabled = false;
+        document.getElementById("button3").disabled = false;
+        document.getElementById("button1").disabled = false;
+		document.getElementById("button5").disabled = true;
+			}
+		}
+		
+		function myFunction10(){
+			if(document.getElementById("button9").disabled === false){
+        document.getElementById("button9").disabled = true;
+        document.getElementById("button6").disabled = false;
+        document.getElementById("button4").disabled = false;
+        document.getElementById("button8").disabled = false;
+		document.getElementById("button5").disabled = true;
+			}
+		}    
             
 		</script>
-    <hr>
+    	<hr>
 	</body>
 </html>
