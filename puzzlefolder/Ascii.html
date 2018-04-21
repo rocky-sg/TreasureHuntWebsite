@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+      <style>
+      .container
+      {
+        background-color: lightblue;
+      }
+      #hint
+      {
+          text-align: left;
+      }
+      #title
+      {
+          text-align: center;
+      }
+      #puzzel
+      {
+         text-align: center;
+      }
+      #kittenImg
+      {
+          position: absolute;
+          left: 500px;
+          top: 300px;
+          visibility: hidden;
+          border-style: solid;
+      }
+      </style>
+        <meta charset = "utf-8"/>
+        <title> Ascii Puzzel  </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    </head>
+    <body class = "container">
+        <H1 id = "title"> Unencrypt the message! </H1>
+        <p id = "hint"> </p>
+        <button onclick ="showHint()"> Hint </button>
+        <H2 id = "puzzel"> *(11&7C </H2>
+        <Input class = "form-control" id = "decipher"> </Input>
+        <button onclick = "decipher()"> Submit </button>
+        <script>
+          function showHint()
+          {
+              document.getElementById("hint").innerHTML = "Ascii plus 23";
+          }
+          function decipher()
+          {
+              var theCode = document.getElementById("decipher").value
+              if(theCode === "KITTENZ")
+              {
+                alert("Well Done!")
+                document.getElementById("kittenImg").style.visibility = "visible";
+              }
+          }
+        </script>
+
+        <img id = "kittenImg" src = "images/KITTENZ.jpg" >
+    </body>
+</html>
