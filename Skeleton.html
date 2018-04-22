@@ -5,7 +5,7 @@
 		<title> Treasure Hunt </title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
-  
+
 	<style>
 		p {text-align: center; margin-top: 100px; margin-bottom: 100px;}
 		#mydiv {
@@ -13,7 +13,7 @@
     z-index: 9;
     background-color: white;
     text-align: center;
- 
+
 }
 
 #mydivheader {
@@ -29,18 +29,18 @@
 		<header class = "Main-header">
 			<h1 style="text-align: center; background-color: rgba(25, 99, 71, 0.5); color: black">Treasure Hunt:</h1>
             <h2 style="text-align: center; color: grey;">Solve the puzzle</h2>
-			
+
 			<p> There exists something where there is nothing. You must find the key.</p>
 		</header>
-		
-		
+
+
         	<div id="mydiv">
   			<div id="mydivheader">Congrats</div>
 			</div>
         <h2 Style="font-size: 10px"> FoundM3 </h2>
         <!--Puzzle goes here-->
-        
-        
+
+
 		<div class="form-group">
   			<label for="usr">Answer:</label>
   				<input type="text" class="form-control" id="myText">
@@ -48,11 +48,11 @@
 		<div class="form-group">
 			<button type="submit" class="btn btn-default" onclick="myFunction()">Submit</button>
 		</div>
-        
+
 		<br>
-			<button type="button" class="btn btn-primary active" "btn-block" id="Next" onclick="window.location.href='/puzzlefolder/buttonclick.html'" disabled>Next Puzzle</button>
+			<button type="button" class="btn btn-primary active" "btn-block" id="Next" onclick="window.location.href='puzzlefolder/buttonclick.html'" disabled>Next Puzzle</button>
 		<script>
-			
+
 			//Make the DIV element draggagle:
 			dragElement(document.getElementById(("mydiv")));
 
@@ -94,14 +94,14 @@
     		document.onmousemove = null;
   		}
 			}
-			
+
 			function myFunction() {
 				if (document.getElementById("myText").value === "FoundM3")
    				 document.getElementById("Next").disabled = false;
     			}
-			
-			
-            
+
+
+
 		</script>
     <hr>
 	</body>

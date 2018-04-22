@@ -16,13 +16,13 @@
             <h2 style="text-align: center; color: grey;">Solve the puzzle</h2>
             <hr>
 		</header>
-        
+
         <br>
        <h> Just Submit. Patience is key. </h>
        <br>
        <br>
        <br>
-        
+
 		<div class="form-group">
   			<label for="usr">Answer:</label>
   				<input type="text" class="form-control" id="myText">
@@ -31,15 +31,15 @@
 			<button type="submit" class="btn btn-default" onclick="setTimeout(myFunction, 10000)">Submit</button>
 		</div>
 		<br>
-		<button type="button" class="btn btn-primary active" onclick="window.location.href='/puzzlefolder/WhoWillDie.html'" "btn-block" id="Next" disabled>Next Puzzle</button>
+		<button type="button" class="btn btn-primary active" onclick="window.location.href='../puzzlefolder/WhoWillDie.html'" "btn-block" id="Next" disabled>Next Puzzle</button>
 		<script>
-        
+
 			function myFunction() {
 				if(document.getElementById("myText").value === "")
    				 document.getElementById("Next").disabled = false;
     			}
-                
-            
+
+
 		</script>
    		 <hr>
 	</body>
