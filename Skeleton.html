@@ -5,18 +5,39 @@
 		<title> Treasure Hunt </title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheets/stylesheet.css">
+  
 	<style>
-		p {border-style: solid}
+		p {text-align: center; margin-top: 100px; margin-bottom: 100px;}
+		#mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: white;
+    text-align: center;
+ 
+}
+
+#mydivheader {
+    padding: 1px;
+    cursor: move;
+    z-index: 5;
+    background-color: white;
+    color: white;
+}
 	</style>
 	</head>
 	<body class="container">
 		<header class = "Main-header">
 			<h1 style="text-align: center; background-color: rgba(25, 99, 71, 0.5); color: black">Treasure Hunt:</h1>
             <h2 style="text-align: center; color: grey;">Solve the puzzle</h2>
+			
+			<p> There exists something where there is nothing. You must find the key.</p>
 		</header>
-        
-        
+		
+		
+        	<div id="mydiv">
+  			<div id="mydivheader">Congrats</div>
+			</div>
+        <h2 Style="font-size: 10px"> FoundM3 </h2>
         <!--Puzzle goes here-->
         
         
@@ -29,17 +50,57 @@
 		</div>
         
 		<br>
-			<button type="button" class="btn btn-primary active" "btn-block" id="Next" onclick="redirect()" disabled>Next Puzzle</button>
+			<button type="button" class="btn btn-primary active" "btn-block" id="Next" onclick="window.location.href='/puzzlefolder/buttonclick.html'" disabled>Next Puzzle</button>
 		<script>
+			
+			//Make the DIV element draggagle:
+			dragElement(document.getElementById(("mydiv")));
+
+			function dragElement(elmnt) {
+				var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+				if (document.getElementById(elmnt.id + "header")) {
+					/* if present, the header is where you move the DIV from:*/
+					document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+				} else {
+    		/* otherwise, move the DIV from anywhere inside the DIV:*/
+    		elmnt.onmousedown = dragMouseDown;
+  			}
+
+  			function dragMouseDown(e) {
+    		e = e || window.event;
+				// get the mouse cursor position at startup:
+    		pos3 = e.clientX;
+    		pos4 = e.clientY;
+    		document.onmouseup = closeDragElement;
+    		// call a function whenever the cursor moves:
+				document.onmousemove = elementDrag;
+			}
+
+  			function elementDrag(e) {
+			e = e || window.event;
+			// calculate the new cursor position:
+    		pos1 = pos3 - e.clientX;
+    		pos2 = pos4 - e.clientY;
+    		pos3 = e.clientX;
+    		pos4 = e.clientY;
+    		// set the element's new position:
+    		elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    		elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  		}
+
+  			function closeDragElement() {
+    		/* stop moving when mouse button is released:*/
+    		document.onmouseup = null;
+    		document.onmousemove = null;
+  		}
+			}
+			
 			function myFunction() {
-				if (document.getElementById("myText").value === "<!--ANSWER-->")
+				if (document.getElementById("myText").value === "FoundM3")
    				 document.getElementById("Next").disabled = false;
     			}
 			
-			function redirect() {
-            			document.location.href='';
-          		  }
-                
+			
             
 		</script>
     <hr>
